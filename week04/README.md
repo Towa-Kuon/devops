@@ -57,3 +57,5 @@ ss -tlnp | grep 8080
 ```
 
 포트 충돌 확인 후 필요하면 `kill <PID>` 또는 `pkill -f "http.server"`로 정리합니다.
+
+- 4주차 자동화/네트워크 실습 실행 확인 완료
