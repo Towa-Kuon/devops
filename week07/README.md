@@ -96,9 +96,13 @@ docker compose watch --no-up
 
 이미 실행 중인 컨테이너를 대상으로 파일 변경을 감시한다. 이 명령을 실행한 터미널에서 `Ctrl+C`를 누르면 감시만 종료된다.
 
-## 추가할 기록
 
-아래 실행 결과와 화면 캡처는 아직 확인해서 추가해야 한다.
+## 실행 결과
 
-- `docker compose ps`에서 web과 Redis가 `healthy`로 표시된 결과
-- web을 3개 실행한 뒤 서로 다른 `Pod/Host` 이름이 표시된 화면 캡처
+- Docker Compose로 nginx, web, Redis 실행
+- web과 Redis의 healthy 상태 확인
+- web을 3개로 늘려 정상 실행 확인
+- Pod/Host 값이 다르게 나오는 것 확인
+- Redis에 방명록 글 저장 확인
+- web-2 중지 후 keep-web3.sh로 다시 실행 확인
+- 스크립트를 종료하면 자동 점검도 종료됨
