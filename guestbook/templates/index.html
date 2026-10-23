@@ -20,6 +20,7 @@
                       border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
     button { background: var(--brand); color: #fff; border: 0; padding: 10px 20px;
              border-radius: 6px; font-size: 14px; cursor: pointer; }
+    .count { font-size: 12px; color: #777; text-align: right; margin-bottom: 8px; }
     .entry { border-bottom: 1px solid #eee; padding: 12px 0; }
     .entry:last-child { border-bottom: 0; }
     .entry .who { font-weight: 600; color: var(--brand); }
@@ -39,12 +40,19 @@
     <div class="card">
       <form action="/add" method="post">
         <input name="name" placeholder="이름" maxlength="20">
-        <textarea name="message" placeholder="한마디 남기기" rows="2" maxlength="200"></textarea>
+        <textarea id="message" name="message" placeholder="한마디 남기기" rows="2" maxlength="200" aria-describedby="char-count"></textarea>
+        <div id="char-count" class="count">0 / 200자</div>
         <button type="submit">남기기</button>
       </form>
     </div>
 
     <div class="card">
+      <form action="/" method="get">
+        <input type="search" name="q" value="{{ keyword }}" placeholder="이름이나 내용 검색" maxlength="200" aria-label="방명록 검색">
+        <button type="submit">검색</button>
+        <a href="/">전체 보기</a>
+      </form>
+      {% if keyword %}<p>검색 결과 {{ entries|length }}개</p>{% endif %}
       {% if entries %}
         {% for e in entries %}
           <div class="entry">
@@ -53,10 +61,22 @@
             <div>{{ e.message }}</div>
           </div>
         {% endfor %}
+      {% elif keyword %}
+        <div class="empty">검색 결과가 없습니다.</div>
       {% else %}
         <div class="empty">첫 글의 주인공이 되어주세요!</div>
       {% endif %}
     </div>
   </div>
+<script>
+  const message = document.getElementById("message");
+  const charCount = document.getElementById("char-count");
+  function updateCount() {
+    charCount.textContent = message.value.length + " / " + message.maxLength + "자";
+  }
+  message.addEventListener("input", updateCount);
+  window.addEventListener("pageshow", updateCount);
+  updateCount();
+</script>
 </body>
 </html>

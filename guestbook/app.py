@@ -87,13 +87,20 @@ def incr_visits() -> int:
 @app.route("/")
 def index():
     visits = incr_visits()
+    keyword = request.args.get("q", "").strip()[:200]
+    entries = get_entries()
+    if keyword:
+        entries = [e for e in entries
+                   if keyword.lower() in e["name"].lower()
+                   or keyword.lower() in e["message"].lower()]
     return render_template(
         "index.html",
         title=APP_TITLE,
         color=THEME_COLOR,
         hostname=HOSTNAME,
         visits=visits,
-        entries=get_entries(),
+        entries=entries,
+        keyword=keyword,
         storage="Redis" if redis_client else "Memory",
     )
 
