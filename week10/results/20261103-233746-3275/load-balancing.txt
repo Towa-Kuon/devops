@@ -1,0 +1,15 @@
+{"hostname":"guestbook-78d7d8d7ff-7mx26","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-cmj6s","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-2vlt8","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-ftd7x","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-hz7ld","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-2vlt8","status":"ok"}
+
+All commands and output from this session will be recorded in container logs, including credentials and sensitive information passed through the command prompt.
+If you don't see a command prompt, try pressing enter.
+pod "lb-check-20261103-233746-3275-1" deleted from week10 namespace

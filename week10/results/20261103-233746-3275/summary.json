@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-03T23:47:50+09:00",
+  "context": "minikube",
+  "namespace": "week10",
+  "replicas": 5,
+  "image_v1": "guestbook:week10-v1-20261103-233746-3275",
+  "image_v2": "guestbook:week10-v2-20261103-233746-3275",
+  "port": 8083,
+  "checks": "passed",
+  "browser_screenshots": "manual",
+  "ghcr_push": false,
+  "source_unchanged": true,
+  "revision_v1": "1",
+  "revision_v2": "2",
+  "revision_rollback": "3"
+}

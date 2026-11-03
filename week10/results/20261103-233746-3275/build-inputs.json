@@ -1,0 +1,12 @@
+{
+  "source_sha256": "7a226dc03cdd41473e31d39489d1d1d573c25a5417af337b4023ba9860d90453",
+  "source_files": [
+    "app.py",
+    "Dockerfile",
+    "requirements.txt",
+    "templates/index.html",
+    ".dockerignore"
+  ],
+  "v1_path": "/home/junho/.cache/devops-week10/build.WfPA6B/v1",
+  "v2_path": "/home/junho/.cache/devops-week10/build.WfPA6B/v2"
+}

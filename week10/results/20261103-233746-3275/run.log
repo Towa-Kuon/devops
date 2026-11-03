@@ -1,0 +1,316 @@
+10주차 실습입니다. 실제 출력만 results에 기록합니다.
+default의 9주차와 Compose는 건드리지 않고, week10 네임스페이스를 사용합니다.
+2026-11-03T23:37:46+09:00
+Client:
+ Version:           29.8.0
+ API version:       1.56
+ Go version:        go1.26.8
+ Git commit:        88096ef
+ Built:             Thu Sep  3 21:49:51 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Desktop 4.91.0 (239619)
+ Engine:
+  Version:          29.8.0
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.8
+  Git commit:       3ce5872
+  Built:            Thu Sep  3 21:51:20 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.3.4
+  GitCommit:        db8809540e1a7a9da5d518876894933ff55692ab
+ runc:
+  Version:          1.4.3
+  GitCommit:        v1.4.3-0-gbb14dabe
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Client Version: v1.36.1
+Kustomize Version: v5.8.1
+minikube version: v1.39.0
+commit: 7a9f6a841470a207de8cf4bafcccee0969d8ba10
+* minikube v1.39.0 on Ubuntu 24.04 (kvm/amd64)
+* Using the docker driver based on existing profile
+* Starting "minikube" primary control-plane node in "minikube" cluster
+* Pulling base image v0.0.51 ...
+* Preparing Kubernetes v1.37.0 on containerd 2.3.4 ...
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: storage-provisioner, default-storageclass
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+node/minikube condition met
+NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION                              CONTAINER-RUNTIME
+minikube   Ready    control-plane   19m   v1.37.0   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+namespace/week10 created
+namespace/week10 labeled
+기존 방명록 파일은 수정하지 않고 임시 복사본으로 v1, v2를 준비했습니다.
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 533B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 ...
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 120B done
+#4 DONE 0.1s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+#5 resolve docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30 0.1s done
+#5 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 8.58kB 0.0s done
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [2/6] WORKDIR /app
+#8 CACHED
+
+#9 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/6] COPY . .
+#10 DONE 0.1s
+
+#11 [6/6] RUN useradd -m appuser
+#11 DONE 0.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:6960ced8fb322fcacb666606072ad263062a6118ad22a05fc58975b8f72f8f7a 0.0s done
+#12 exporting config sha256:1794216ba101965be20bcf30810f0ebd878daf36e12b1a819ac317dd890842a5 0.0s done
+#12 exporting attestation manifest sha256:ee9ea1ec94893430f3da8652beb25a23068c65f476b95d76f84f5afeb28379bd
+#12 exporting attestation manifest sha256:ee9ea1ec94893430f3da8652beb25a23068c65f476b95d76f84f5afeb28379bd 0.1s done
+#12 exporting manifest list sha256:91b78607851e3d55f41b026fc77c182d6491d7845beea1311fec8b10b66c69f3 0.1s done
+#12 naming to docker.io/library/guestbook:week10-v1-20261103-233746-3275
+#12 naming to docker.io/library/guestbook:week10-v1-20261103-233746-3275 done
+#12 unpacking to docker.io/library/guestbook:week10-v1-20261103-233746-3275 0.1s done
+#12 DONE 0.8s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 533B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 120B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+#5 resolve docker.io/library/python:3.12-slim@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 8.58kB done
+#4 DONE 0.1s
+
+#6 [3/6] COPY requirements.txt .
+#6 CACHED
+
+#7 [2/6] WORKDIR /app
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY . .
+#9 DONE 0.1s
+
+#10 [6/6] RUN useradd -m appuser
+#10 DONE 0.5s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.4s done
+#11 exporting manifest sha256:9666be27582ee85715926d39016976930210512d859b7b03d628fd01474e404c 0.0s done
+#11 exporting config sha256:9597c4026ea561d7dfe2ed7c392e5f5f351c6e2ba6409b394c6dc0c011f92543 0.1s done
+#11 exporting attestation manifest sha256:a25300a637cb4cfaebffd4151b107660b650c556af24b43f135a6c4399b955a6 0.1s done
+#11 exporting manifest list sha256:645027efc0cb9c1ba82ebc108bfb225fd477856ac64b5a68a2111902b688ac3c
+#11 exporting manifest list sha256:645027efc0cb9c1ba82ebc108bfb225fd477856ac64b5a68a2111902b688ac3c 0.1s done
+#11 naming to docker.io/library/guestbook:week10-v2-20261103-233746-3275 done
+#11 unpacking to docker.io/library/guestbook:week10-v2-20261103-233746-3275 0.1s done
+#11 DONE 0.8s
+deployment.apps/guestbook created (server dry run)
+service/guestbook created (server dry run)
+deployment.apps/guestbook created
+Waiting for deployment "guestbook" rollout to finish: 0 of 2 updated replicas are available...
+Waiting for deployment "guestbook" rollout to finish: 1 of 2 updated replicas are available...
+deployment "guestbook" successfully rolled out
+deployment.apps/guestbook annotated
+deployment.apps/guestbook unchanged
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+guestbook   2/2     2            2           1s
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/guestbook-78d7d8d7ff   2         2         2       2s
+
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          2s
+pod/guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          2s
+service/guestbook created
+NAME        TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+guestbook   NodePort   10.103.178.170   <none>        80:30080/TCP   0s
+Name:                     guestbook
+Namespace:                week10
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=guestbook
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.103.178.170
+IPs:                      10.103.178.170
+Port:                     <unset>  80/TCP
+TargetPort:               5000/TCP
+NodePort:                 <unset>  30080/TCP
+Endpoints:                10.244.0.11:5000,10.244.0.12:5000
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+deployment.apps/guestbook scaled
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          5s    10.244.0.11   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          5s    10.244.0.12   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ncwnb   1/1     Running   0          3s    10.244.0.13   minikube   <none>           <none>
+guestbook-78d7d8d7ff-wvwb8   1/1     Running   0          3s    10.244.0.14   minikube   <none>           <none>
+deployment.apps/guestbook scaled
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          37s   10.244.0.11   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          37s   10.244.0.12   minikube   <none>           <none>
+deployment.apps/guestbook scaled
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          40s   10.244.0.11   minikube   <none>           <none>
+guestbook-78d7d8d7ff-7mx26   1/1     Running   0          3s    10.244.0.16   minikube   <none>           <none>
+guestbook-78d7d8d7ff-cmj6s   1/1     Running   0          3s    10.244.0.15   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          40s   10.244.0.12   minikube   <none>           <none>
+guestbook-78d7d8d7ff-hz7ld   1/1     Running   0          3s    10.244.0.17   minikube   <none>           <none>
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+guestbook   5/5     5            5           40s
+
+[필수 캡처] 위 Pod 5개의 Running / 1/1 화면을 캡처하세요. week10/images/01-pods5.png로 저장합니다.
+확인했으면 Enter: {"hostname":"guestbook-78d7d8d7ff-7mx26","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-cmj6s","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-2vlt8","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-ftd7x","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-hz7ld","status":"ok"}
+
+{"hostname":"guestbook-78d7d8d7ff-2vlt8","status":"ok"}
+
+All commands and output from this session will be recorded in container logs, including credentials and sensitive information passed through the command prompt.
+If you don't see a command prompt, try pressing enter.
+pod "lb-check-20261103-233746-3275-1" deleted from week10 namespace
+서로 다른 응답 Pod: guestbook-78d7d8d7ff-2vlt8, guestbook-78d7d8d7ff-7mx26, guestbook-78d7d8d7ff-cmj6s, guestbook-78d7d8d7ff-ftd7x, guestbook-78d7d8d7ff-hz7ld
+서로 다른 응답 Pod: guestbook-78d7d8d7ff-2vlt8, guestbook-78d7d8d7ff-7mx26, guestbook-78d7d8d7ff-cmj6s, guestbook-78d7d8d7ff-ftd7x, guestbook-78d7d8d7ff-hz7ld
+NAME                         READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          2m43s   10.244.0.11   minikube   <none>           <none>
+guestbook-78d7d8d7ff-7mx26   1/1     Running   0          2m6s    10.244.0.16   minikube   <none>           <none>
+guestbook-78d7d8d7ff-cmj6s   1/1     Running   0          2m6s    10.244.0.15   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          2m43s   10.244.0.12   minikube   <none>           <none>
+guestbook-78d7d8d7ff-hz7ld   1/1     Running   0          2m6s    10.244.0.17   minikube   <none>           <none>
+pod "guestbook-78d7d8d7ff-2vlt8" deleted from week10 namespace
+NAME                         READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-7mx26   1/1     Running   0          2m41s   10.244.0.16   minikube   <none>           <none>
+guestbook-78d7d8d7ff-cmj6s   1/1     Running   0          2m41s   10.244.0.15   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          3m18s   10.244.0.12   minikube   <none>           <none>
+guestbook-78d7d8d7ff-hz7ld   1/1     Running   0          2m41s   10.244.0.17   minikube   <none>           <none>
+guestbook-78d7d8d7ff-pvgh7   1/1     Running   0          33s     10.244.0.19   minikube   <none>           <none>
+pod/rollout-check-20261103-233746-3275 created
+pod/rollout-check-20261103-233746-3275 condition met
+deployment.apps/guestbook image updated
+deployment.apps/guestbook annotated
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 4 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 4 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+deployment "guestbook" successfully rolled out
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-7b88bf64f6-8s74m   1/1     Running   0          36s   10.244.0.22   minikube   <none>           <none>
+guestbook-7b88bf64f6-hkwss   1/1     Running   0          36s   10.244.0.23   minikube   <none>           <none>
+guestbook-7b88bf64f6-jb4dd   1/1     Running   0          35s   10.244.0.24   minikube   <none>           <none>
+guestbook-7b88bf64f6-lqdp8   1/1     Running   0          36s   10.244.0.21   minikube   <none>           <none>
+guestbook-7b88bf64f6-msjq9   1/1     Running   0          35s   10.244.0.25   minikube   <none>           <none>
+NAME                   DESIRED   CURRENT   READY   AGE
+guestbook-78d7d8d7ff   0         0         0       4m
+guestbook-7b88bf64f6   5         5         5       37s
+deployment.apps/guestbook 
+REVISION  CHANGE-CAUSE
+1         v1: 최초 배포
+2         v2: 제목에 v2 표시
+
+pod "rollout-check-20261103-233746-3275" deleted from week10 namespace
+김준호의 방명록 v2
+브라우저 주소: http://localhost:8083
+
+[화면 확인] 제목 뒤 v2와 Pod/Host가 보이는지 확인하세요. 필요하면 week10/images/02-v2.png로 캡처합니다.
+확인했으면 Enter: Warning: resource deployments/guestbook was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.
+deployment.apps/guestbook rolled back
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 3 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 4 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 4 out of 5 new replicas have been updated...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "guestbook" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "guestbook" rollout to finish: 4 of 5 updated replicas are available...
+deployment "guestbook" successfully rolled out
+deployment.apps/guestbook annotated
+deployment.apps/guestbook 
+REVISION  CHANGE-CAUSE
+2         v2: 제목에 v2 표시
+3         v1: 롤백 완료
+
+NAME                   DESIRED   CURRENT   READY   AGE
+guestbook-78d7d8d7ff   5         5         5       9m26s
+guestbook-7b88bf64f6   0         0         0       6m3s
+deployment.apps/guestbook configured
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+guestbook-78d7d8d7ff-2g7km   1/1     Running   0          35s   10.244.0.26   minikube   <none>           <none>
+guestbook-78d7d8d7ff-ln6j8   1/1     Running   0          34s   10.244.0.30   minikube   <none>           <none>
+guestbook-78d7d8d7ff-nmf9z   1/1     Running   0          34s   10.244.0.29   minikube   <none>           <none>
+guestbook-78d7d8d7ff-nqszq   1/1     Running   0          35s   10.244.0.28   minikube   <none>           <none>
+guestbook-78d7d8d7ff-tgkrr   1/1     Running   0          35s   10.244.0.27   minikube   <none>           <none>
+NAME        TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+guestbook   NodePort   10.103.178.170   <none>        80:30080/TCP   9m24s
+김준호의 방명록
+실제 실행 기록을 README에 반영했습니다: /home/junho/devops/week10/README.md
+브라우저 주소: http://localhost:8083
+
+[롤백 확인] 제목에서 v2가 사라지고 Pod/Host가 보이는지 확인하세요. 필요하면 week10/images/03-rollback.png로 캡처합니다.
+확인했으면 Enter: 실제 실행 기록을 README에 반영했습니다: /home/junho/devops/week10/README.md
+
+명령 실행 검사를 통과했습니다. 기록: /home/junho/devops/week10/results/20261103-233746-3275
+스크린샷과 GitHub 반영은 별도입니다. GHCR 업로드는 하지 않았습니다.
+파일을 다시 실행할 때 --show로 결과 확인, --open으로 브라우저 연결, --finish로 검토 후 업로드합니다.
+9주차 실행 기록은 이 작업으로 완료 처리하지 않습니다.

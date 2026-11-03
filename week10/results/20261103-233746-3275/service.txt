@@ -1,0 +1,2 @@
+NAME        TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+guestbook   NodePort   10.103.178.170   <none>        80:30080/TCP   0s

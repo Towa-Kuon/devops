@@ -1,0 +1,5 @@
+deployment.apps/guestbook 
+REVISION  CHANGE-CAUSE
+1         v1: 최초 배포
+2         v2: 제목에 v2 표시
+

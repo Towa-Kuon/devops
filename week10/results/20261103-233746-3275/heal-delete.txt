@@ -1,0 +1,1 @@
+pod "guestbook-78d7d8d7ff-2vlt8" deleted from week10 namespace

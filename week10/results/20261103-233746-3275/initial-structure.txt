@@ -1,0 +1,8 @@
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+guestbook   2/2     2            2           1s
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/guestbook-78d7d8d7ff   2         2         2       2s
+
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          2s
+pod/guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          2s

@@ -1,0 +1,2 @@
+deployment.apps/guestbook created (server dry run)
+service/guestbook created (server dry run)

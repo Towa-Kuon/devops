@@ -1,0 +1,16 @@
+NAME                         READY   STATUS    RESTARTS   AGE
+guestbook-78d7d8d7ff-2vlt8   1/1     Running   0          2m43s
+guestbook-78d7d8d7ff-7mx26   1/1     Running   0          2m6s
+guestbook-78d7d8d7ff-cmj6s   1/1     Running   0          2m6s
+guestbook-78d7d8d7ff-ftd7x   1/1     Running   0          2m43s
+guestbook-78d7d8d7ff-hz7ld   1/1     Running   0          2m6s
+guestbook-78d7d8d7ff-2vlt8   1/1     Terminating   0          2m45s
+guestbook-78d7d8d7ff-pvgh7   0/1     Pending       0          0s
+guestbook-78d7d8d7ff-2vlt8   1/1     Terminating   0          2m45s
+guestbook-78d7d8d7ff-pvgh7   0/1     Pending       0          0s
+guestbook-78d7d8d7ff-pvgh7   0/1     ContainerCreating   0          0s
+guestbook-78d7d8d7ff-pvgh7   0/1     ContainerCreating   0          1s
+guestbook-78d7d8d7ff-pvgh7   1/1     Running             0          1s
+guestbook-78d7d8d7ff-2vlt8   0/1     Error               0          3m16s
+guestbook-78d7d8d7ff-2vlt8   0/1     Error               0          3m16s
+guestbook-78d7d8d7ff-2vlt8   0/1     Error               0          3m16s
