@@ -1,0 +1,52 @@
+Name:             mynginx
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Tue, 03 Nov 2026 23:19:11 +0900
+Labels:           run=mynginx
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.3
+IPs:
+  IP:  10.244.0.3
+Containers:
+  mynginx:
+    Container ID:   containerd://eb638ce8323d940a53fa428f546e7eff1a94ef816da082e50831128a7337eae3
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:5ab5b0b01097420873a3f3330f44248e34a3c2a3e8d5ee30658aeae8cb7435da
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Tue, 03 Nov 2026 23:19:21 +0900
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-p8fdn (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-p8fdn:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  10s   default-scheduler  Successfully assigned default/mynginx to minikube
+  Normal  Pulling    9s    kubelet            spec.containers{mynginx}: Pulling image "nginx"
+  Normal  Pulled     0s    kubelet            spec.containers{mynginx}: Successfully pulled image "nginx" in 8.582s (8.582s including waiting). Image size: 63932917 bytes.
+  Normal  Created    0s    kubelet            spec.containers{mynginx}: Container created
+  Normal  Started    0s    kubelet            spec.containers{mynginx}: Container started

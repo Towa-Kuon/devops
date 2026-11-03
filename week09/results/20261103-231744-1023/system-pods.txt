@@ -1,0 +1,9 @@
+NAMESPACE     NAME                               READY   STATUS              RESTARTS   AGE
+kube-system   coredns-559f6c778d-nxsl4           0/1     ContainerCreating   0          19s
+kube-system   etcd-minikube                      1/1     Running             0          26s
+kube-system   kindnet-zp8kv                      1/1     Running             0          20s
+kube-system   kube-apiserver-minikube            1/1     Running             0          27s
+kube-system   kube-controller-manager-minikube   1/1     Running             0          26s
+kube-system   kube-proxy-mjqwg                   1/1     Running             0          20s
+kube-system   kube-scheduler-minikube            1/1     Running             0          26s
+kube-system   storage-provisioner                0/1     ContainerCreating   0          24s

@@ -1,0 +1,6 @@
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+mynginx-668c4f948b-j86vs   1/1     Running   0          5s    10.244.0.8   minikube   <none>           <none>
+mynginx-668c4f948b-jrsft   1/1     Running   0          21s   10.244.0.4   minikube   <none>           <none>
+mynginx-668c4f948b-khswz   1/1     Running   0          5s    10.244.0.9   minikube   <none>           <none>
+mynginx-668c4f948b-qxkhz   1/1     Running   0          12s   10.244.0.7   minikube   <none>           <none>
+mynginx-668c4f948b-xpk8x   1/1     Running   0          21s   10.244.0.6   minikube   <none>           <none>

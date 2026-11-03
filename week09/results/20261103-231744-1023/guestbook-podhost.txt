@@ -1,0 +1,1 @@
+      <span class="badge">Pod/Host: guestbook-858477849b-rf5xw</span>

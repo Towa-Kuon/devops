@@ -1,0 +1,2 @@
+NAME      READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+mynginx   1/1     Running   0          10s   10.244.0.3   minikube   <none>           <none>

@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-03T23:20:13+09:00",
+  "image": "guestbook:week09",
+  "port": 8082,
+  "guestbook_pod": "guestbook-858477849b-rf5xw",
+  "deleted_pod": "mynginx-668c4f948b-7cgqd",
+  "replacement_pod": "mynginx-668c4f948b-qxkhz"
+}
