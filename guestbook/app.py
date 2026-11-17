@@ -86,6 +86,7 @@ def incr_visits() -> int:
 # ---------------------------------------------------------------
 @app.route("/")
 def index():
+    print(APP_TITL)
     visits = incr_visits()
     keyword = request.args.get("q", "").strip()[:200]
     entries = get_entries()
