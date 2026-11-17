@@ -86,7 +86,6 @@ def incr_visits() -> int:
 # ---------------------------------------------------------------
 @app.route("/")
 def index():
-    print(APP_TITL)
     visits = incr_visits()
     keyword = request.args.get("q", "").strip()[:200]
     entries = get_entries()
@@ -123,7 +122,7 @@ def api_entries():
 
 @app.route("/healthz")
 def healthz():
-    return jsonify({"status": "ok", "hostname": HOSTNAME}), 200
+    return jsonify({"status": "ok", "hostname": HOSTNAME}), 500
 
 
 @app.route("/readyz")
